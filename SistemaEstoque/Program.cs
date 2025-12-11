@@ -47,10 +47,9 @@ namespace SistemaEstoque
                 Console.Clear();
             }
         }
-
-        /// <summary>
-        /// Exibe o menu de opções
-        /// </summary>
+      
+        // Exibe o menu de opções
+       
         static void ExibirMenu()
         {
             Console.WriteLine("=== MENU DE OPÇÕES ===");
@@ -61,9 +60,8 @@ namespace SistemaEstoque
             Console.Write("\nEscolha uma opção: ");
         }
 
-        /// <summary>
-        /// Insere um novo produto no sistema
-        /// </summary>
+        // Insere um novo produto no sistema
+      
         static void InserirProduto()
         {
             Console.WriteLine("\n=== INSERIR PRODUTO ===");
@@ -132,10 +130,8 @@ namespace SistemaEstoque
                 Console.WriteLine($"❌ Erro inesperado: {ex.Message}");
             }
         }
-
-        /// <summary>
         /// Lista todos os produtos cadastrados
-        /// </summary>
+    
         static void ListarProdutos()
         {
             Console.WriteLine("\n=== PRODUTOS CADASTRADOS ===");
@@ -157,10 +153,8 @@ namespace SistemaEstoque
 
             Console.WriteLine($"\nTotal de produtos: {produtos.Count}");
         }
-
-        /// <summary>
-        /// Limpa o arquivo de estoque
-        /// </summary>
+        // Limpa o arquivo de estoque
+     
         static void LimparArquivo()
         {
             Console.WriteLine("\n=== LIMPAR ARQUIVO ===");
@@ -191,12 +185,8 @@ namespace SistemaEstoque
                 Console.WriteLine("❌ Operação cancelada.");
             }
         }
-
-        /// <summary>
         /// Salva um produto no arquivo
-        /// </summary>
-        /// <param name="produto">Produto a ser salvo</param>
-        /// <returns>True se salvou com sucesso</returns>
+     
         static bool SalvarProdutoNoArquivo(Produto produto)
         {
             try
@@ -215,10 +205,8 @@ namespace SistemaEstoque
             }
         }
 
-        /// <summary>
         /// Lê todos os produtos do arquivo
-        /// </summary>
-        /// <returns>Lista de produtos</returns>
+     
         static List<Produto> LerProdutosDoArquivo()
         {
             List<Produto> produtos = new List<Produto>();

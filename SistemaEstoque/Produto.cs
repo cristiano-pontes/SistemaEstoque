@@ -2,22 +2,17 @@
 using System.Globalization;
 
 namespace SistemaEstoque
-{
-    /// <summary>
-    /// Classe que representa um produto no estoque
-    /// </summary>
+{   
+    // Classe que representa um produto no estoque
+    
     public class Produto
     {
         public string Nome { get; set; }
         public int Quantidade { get; set; }
         public decimal Preco { get; set; }
-
-        /// <summary>
-        /// Construtor da classe Produto
-        /// </summary>
-        /// <param name="nome">Nome do produto</param>
-        /// <param name="quantidade">Quantidade em estoque</param>
-        /// <param name="preco">Preço unitário</param>
+                
+        // Construtor da classe Produto
+       
         public Produto(string nome, int quantidade, decimal preco)
         {
             Nome = nome;
@@ -25,21 +20,17 @@ namespace SistemaEstoque
             Preco = preco;
         }
 
-        /// <summary>
-        /// Converte o produto para formato de arquivo (CSV)
-        /// </summary>
-        /// <returns>String no formato CSV</returns>
+        
+       // Converte o produto para formato de arquivo (CSV)
+        
         public string ToFileFormat()
         {
             // Usa ponto como separador decimal e InvariantCulture
             return $"{Nome},{Quantidade},{Preco.ToString(CultureInfo.InvariantCulture)}";
         }
-
-        /// <summary>
-        /// Cria um produto a partir de uma linha do arquivo
-        /// </summary>
-        /// <param name="linha">Linha do arquivo no formato CSV</param>
-        /// <returns>Produto criado ou null se inválido</returns>
+                
+        // Cria um produto a partir de uma linha do arquivo
+      
         public static Produto FromFileFormat(string linha)
         {
             try
@@ -77,10 +68,8 @@ namespace SistemaEstoque
             }
         }
 
-        /// <summary>
-        /// Exibe as informações do produto formatadas
-        /// </summary>
-        /// <returns>String formatada do produto</returns>
+        // Exibe as informações do produto formatadas
+        
         public override string ToString()
         {
             return $"Produto: {Nome} | Quantidade: {Quantidade} | Preço: R$ {Preco:F2}";

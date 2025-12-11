@@ -6,7 +6,8 @@ using System.Globalization;
 namespace SistemaEstoque
 {
     class Program
-    {
+    { 
+        // versao final
         // Nome do arquivo para persistência
         private static string nomeArquivo = "estoque.txt";
 
